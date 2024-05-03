@@ -17,7 +17,7 @@
     <div id="nav-bar">
       <ul id="menu-link">
         <li><a>기본정보 관리</a></li>
-        <li><a class="active">투자유형 관리</a></li>
+        <li><a href="" class="active">투자유형 관리</a></li>
         <li><a>입출금내역 조회</a></li>
         <li><a>영업내역 조회</a></li>
         <li><a>투자내역 조회</a></li>
@@ -29,7 +29,8 @@
     </div>
   </div>
   <section class="home-sec">
-    <div><span id="table-t1">신청 목록</span> <span id="tablet2">(총 100명 | 승인대기 <u>1</u>건)</span>
+    <div>
+      <span id="table-t1">신청 목록</span> <span id="tablet2">(총 100명 | 승인대기 <u>1</u>건)</span>
       <div class="action-select">
 
         <select class="table-filtters">
@@ -40,18 +41,619 @@
         </select>
 
         <select class="table-filtters">
-          <option>신청일시순</option>
-          <option>신청일시순</option>
-          <option>승인일시순</option>
+          <option value="신청일시순">신청일시순</option>
+          <option value="신청일시순">신청일시순</option>
+          <option value="승인일시순">승인일시순</option>
         </select>
         
         <select class="table-filtters">
-          <option>승인상태 변경</option>
-          <option>승인완료</option>
-          <option>승인거부</option>
+          <option value="승인상태 변경">승인상태 변경</option>
+          <option value="승인완료">승인완료</option>
+          <option value="승인거부">승인거부</option>
         </select>        
       </div>
     </div>
+    <hr id="home-hr">
+    <div>
+      <button class="registration-btn">등록</button>
+      <div class="float-right">
+        <span class="table-t3 ">선택한 0건</span>
+        <select class="table-filtters">
+          <option value="승인상태 변경">승인상태 변경</option>
+  
+        </select>  
+        <button class="save-btn">저장</button>     
+      </div>
+    </div>
+  </section>
+  <section>
+    <table class="table1" width="100%">
+      <thead>
+        <th width="5%"><input type="checkbox" name="checkbox[]" /></th>
+        <th width="5%">NO</th>
+        <th width="10%" class="no-wrap">기존유형</th>
+        <th width="10%" class="no-wrap">신청유형</th>
+        <th width="10%" class="no-wrap">제출서류</th>
+        <th width="10%" class="no-wrap">신청일시</th>
+        <th width="10%" class="no-wrap">승인여부</th>
+        <th class="no-wrap" width="30%">승인거부 사유</th>
+        <th width="10%" class="no-wrap">승인일시</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>1</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>2</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>3</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>   
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>4</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>5</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>6</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr >
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>7</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>8</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>9</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>10</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>11</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>12</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>13</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>14</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>15</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>   
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>16</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>17</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>18</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr >
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>19</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>20</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>21</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>22</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>23</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>24</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>                                                     
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>25</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>26</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>27</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>   
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>28</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>29</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>30</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr >
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>31</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>32</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>33</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>34</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>35</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>36</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>37</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>38</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>39</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>   
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>40</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>41</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>42</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr >
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>43</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>44</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>45</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>46</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>47</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>48</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-success">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr> 
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>49</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-warning">승인대기</span></td>
+          <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="checkbox[]" /></td>
+          <td>50</td>
+          <td class="no-wrap">소득적격</td>
+          <td class="no-wrap">개인전문</td>
+          <td class="no-wrap"><span>보기</span></td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+          <td><span class="badge-danger">승인대기</span></td>
+          <td style="max-width: 100px;">&nbsp;</td>
+          <td class="no-wrap">2023-01-10 09:00:00</td>
+        </tr>                                                             
+      </tbody>     
+    </table>  
+    <div class="pagination">
+      <ul>
+        <li>
+          <a href=""><i class="fa-solid fa-angles-left"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-angle-left"></i></a></li>
+        <li><a href="" class="active">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+        <li><a href="">7</a></li>
+        <li><a href="">8</a></li>
+        <li><a href="">9</a></li> 
+        <li><a href="">10</a></li>                
+        <li><a href=""><i class="fa-solid fa-angle-right"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-angles-right"></i></a></li>
+      </ul> 
+    </div>
+     
   </section>
 </body>
 
