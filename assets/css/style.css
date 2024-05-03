@@ -1,3 +1,6 @@
+body{
+  font-family: Pretendard;
+}
 #dot {
   height: 6px;
   width: 6px;
@@ -63,7 +66,109 @@ li a[class='active']{
   font-family: Pretendard;
   font-size: 16px;
   font-weight: 500;
-  line-height: 19.2px;
   text-align: center;
   
 }
+
+.home-sec{
+  margin-top: 50px;
+}
+
+span u{
+  color : #FF4D4F;
+}
+
+.action-select{
+  float: right;
+}
+
+#table-t1{
+  font-size: 20px;
+  font-weight: bolder;
+  line-height: 23.87px;
+  text-align: left;
+  color: #0B101A;
+
+  
+}
+
+#table-t2{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 16.71px;
+  color: #5A616A;
+
+}
+
+.table-filtters{
+  border-radius: 8px;
+  height: 39px;
+  width: 150.15px;
+  border: 1px solid #B1B4BB;
+  background-color: #FFFFFF;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  height: 39px;
+  width: 150.15px;
+  border: 1px solid #B1B4BB;
+  background-color: #FFFFFF;  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-width: 150.15px;
+  bottom: -108px;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.select-option{
+  text-indent: 10%;
+  font-size: 16px;
+  padding-top: 6px 46px 6px 16px;
+  gap: 10px;
+}
+
+.select-option:hover{
+  background: #2A3958;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+#dropdown-first{
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  top: 12px;
+  margin-left: 5px;
+  letter-spacing: normal;
+}
+
+.fa-angle-down{
+  position: relative;
+  right: -22px;
+  border:1px;
+}
+
+.caret-up {
+  content: "\25bc";
+  color: grey;
+}
+
+
+
+
+
