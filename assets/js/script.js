@@ -10,6 +10,9 @@ const newInvestmentClose2 = document.getElementById("btn-cancel2");
 
 const overlay = document.getElementById("overlay");
 
+// All investment items checkbox
+const allInvestmentCheckbox = document.getElementsByClassName("check-investment");
+
 // Handle new investment modal box
 newInvestBtn.addEventListener("click", (e) => {
   registrationBox.classList.remove("off-display");
@@ -29,5 +32,20 @@ function handleCloseModal(){
   
     //close the page overlay after modal been closed
     overlay.style.display = "none";
-  }  
+}
+
+
+
+function handleAllCheckBox(dis){
+  if(dis.checked === true){
+    for(let k =0; k<allInvestmentCheckbox.length; k++){
+      allInvestmentCheckbox[k].checked = true;
+    }
+  }else{
+    for(let k =0; k<allInvestmentCheckbox.length; k++){
+      allInvestmentCheckbox[k].checked = false;
+    }
+  }
+
+}
 
