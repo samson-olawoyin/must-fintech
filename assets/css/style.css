@@ -34,9 +34,17 @@ color:#FF4D4F;
   border: 1px solid #D7D8DA
 }
 
-#home-hr{
+.home-hr{
   margin-top:30px;
   border: 1px solid #D7D8DA
+}
+
+.home-hr2{
+  border: 1px solid #D7D8DA;
+  position: absolute;
+  left: 0;
+  right: -42px; 
+  width: 747px;
 }
 
 #nav-bar{
@@ -203,6 +211,11 @@ span u{
   display: inline;
 }
 
+.float-left{
+  float:left;
+  display: inline;
+}
+
 thead{
   background: #EEF0F4;
   height: 60px;
@@ -350,6 +363,90 @@ span.badge-danger{
     color: #A1A1A1;
     font-size: 16px;
 
+  }
+
+  #investment-box{
+    height: 450px;
+    width: 700px;
+    margin: 20px 15px 20px 15px;
+    box-shadow: 0px 20px 24px -4px #1018281A;
+    border-radius: 12px;  
+    border: 1px solid #1018280A;   
+    padding: 20px 24px 0px 24px; 
+  }
+
+  .modal-btn{
+    background-color: white;
+    border: none;
+    color :  #5A616A;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .modal-footer{
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  #btn-save{
+    background-color: #2A3958;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    padding: 15px 15px 15px 15px;
+    width: 150px;
+    max-height: 44px;
+    border-radius: 10px;
+  }
+
+  #btn-cancel{
+    background-color: #FFFFFF;;
+    color: #2A3958;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    padding: 15px 15px 15px 15px;
+    width: 150px;
+    max-height: 44px;
+    border-radius: 10px;
+    border: 1.5px solid #2A3958;
+  }
+
+  #modal-info{
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -0.02px;
+    line-height: 19.5px;
+  }
+
+  #invent-table{
+    display: table;
+    margin-top: 20px;
+  }
+
+  .invent-table-row{
+    display: table-row;
+    border: 1px solid #D7D8DA
+
+  
+  }
+
+  .invest-table-cell{
+    display: table-cell;
+    padding: 20px;
+    width: 150px;
+    max-height: 15px;
+  }
+
+  .invest-table-cell input[type='text']{
+    border:0px;
+    height: 20px;
+  }  
+
+  .invest-table-cell.th{
+    background-color: #EBEEF3;
+    ;
   }
 
 
