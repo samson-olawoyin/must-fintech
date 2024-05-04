@@ -4,7 +4,6 @@
 <head>
   <title>MUST FINTECT</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -29,10 +28,10 @@
     </div>
   </div>
   <section class="home-sec">
+    <div id="overlay" class="off-display"></div>
     <div>
       <span id="table-t1">신청 목록</span> <span id="tablet2">(총 100명 | 승인대기 <u>1</u>건)</span>
       <div class="action-select">
-
         <select class="table-filtters">
           <option value="승인여부 전체">승인여부 전체</option>
           <option value="승인대기">승인대기</option>
@@ -55,7 +54,7 @@
     </div>
     <hr class="home-hr">
     <div>
-      <button class="registration-btn">등록</button>
+      <button id="registration-btn" class="registration-btn">등록</button>
       <div class="float-right">
         <span class="table-t3 ">선택한 0건</span>
         <select class="table-filtters">
@@ -654,10 +653,10 @@
       </ul> 
     </div>
   </section>
-  <section id="new-investment-box">
+  <section id="new_investment_box" class="off-display">
     <div id="investment-box">
       <h3 class="float-left">투자유형 변경</h3>
-      <button class="float-right modal-btn">X</button>
+      <button class="float-right modal-btn" id="btn-cancel2">X</button>
       <br><br><br>
       <hr class="home-hr2"/>
       <div id="invent-table">
@@ -665,12 +664,36 @@
           <div class="invest-table-cell th">회원번호</div>
           <div class="invest-table-cell"><input type="text" value="abc111" /></div>
         </div>
+        <div class="invent-table-row">
+          <div class="invest-table-cell th">회원명/법인명</div>
+          <div class="invest-table-cell"><input type="text" value="김길동" /></div>
+        </div> 
+        <div class="invent-table-row">
+          <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
+          <div class="invest-table-cell">
+            <select>
+              <option value="일반개인">일반개인</option>
+              <option value="일반개인">일반개인</option>
+              <option value="소득적격">소득적격</option>
+              <option value="개인전문">개인전문</option>
+              <option value="법인">법인</option>
+              <option value="여신금융">여신금융</option>
+              <option value="P2P온투">P2P온투</option>
+            </select>
+          </div>
+        </div>   
+        <div class="invent-table-row">
+          <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
+          <div class="invest-table-cell">
+            <span class="fileupload">파일 선택</span>
+          </div>
+        </div>                    
       </div>
       <ul id="modal-info">
         <li>파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.</li>
         <li>최대 10개, 100MB까지 등록이 가능합니다.</li>
       </ul>
-      <br><br><br>
+      <br>
       <hr class="home-hr2"/>
       <div class="modal-footer">
         <button id="btn-save">저장</button>
@@ -678,6 +701,8 @@
       </div>
     </div>
   </section>
+
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
