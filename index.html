@@ -68,7 +68,10 @@
   <section>
     <table class="table1" width="100%">
       <thead>
-        <th width="5%"><input type="checkbox" id="check-all-investment" onchange="handleAllCheckBox(this)" name="checkbox[]" /></th>
+        <th width="5%">
+          <input class="c-checkbox" id="check-all-investment" class="check-investment" checked="false" onClick="handleAllCheckBox(this)" readonly/>
+          <!--input type="checkbox" id="check-all-investment" onchange="handleAllCheckBox(this)" name="checkbox[]" /-->
+        </th>
         <th width="5%">NO</th>
         <th width="10%" class="no-wrap">기존유형</th>
         <th width="10%" class="no-wrap">신청유형</th>
@@ -80,7 +83,8 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+        <td>
+          <input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>1</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -91,29 +95,29 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+        <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>2</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>3</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>   
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>4</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -124,29 +128,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>5</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>6</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr >
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>7</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -157,29 +161,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>8</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>9</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>10</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -190,29 +194,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>11</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>12</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>13</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -223,29 +227,29 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>14</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>15</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>   
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>16</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -256,29 +260,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>17</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>18</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr >
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>19</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -289,29 +293,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>20</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>21</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>22</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -322,29 +326,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>23</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>24</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>                                                     
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>25</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -355,29 +359,29 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>26</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>27</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>   
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>28</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -388,29 +392,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>29</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>30</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr >
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>31</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -421,29 +425,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>32</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>33</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>34</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -454,29 +458,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>35</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>36</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>37</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -487,29 +491,29 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>38</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>39</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>   
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>40</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -520,29 +524,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>41</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>42</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr >
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>43</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -553,29 +557,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>44</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>45</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>46</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -586,29 +590,29 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>47</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">서류 식별 불가 금융투자업자에 계좌를 개설한지 1년 미만으로 전문투자자 승인 불가</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>48</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-success">승인대기</span></td>
+          <td><span class="badge-success">승인완료</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr> 
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>49</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
@@ -619,13 +623,13 @@
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="check-investment" onchange="handleCheckboxCounter(this)" name="checkbox[]" /></td>
+          <td><input type="checkbox-custom" class="c-checkbox" class="check-investment" checked="false" onClick="handleCheckboxCounter(this)" readonly/></td>
           <td>50</td>
           <td class="no-wrap">소득적격</td>
           <td class="no-wrap">개인전문</td>
           <td class="no-wrap"><span>보기</span></td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
-          <td><span class="badge-danger">승인대기</span></td>
+          <td><span class="badge-danger">승인거부</span></td>
           <td style="max-width: 100px;">&nbsp;</td>
           <td class="no-wrap">2023-01-10 09:00:00</td>
         </tr>                                                             

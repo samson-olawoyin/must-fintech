@@ -14,7 +14,7 @@ const itemCounter = document.getElementById("item-counter");
 
 
 // All investment items checkbox
-const allInvestmentCheckbox = document.getElementsByClassName("check-investment");
+const allInvestmentCheckbox = document.querySelectorAll("input[type='checkbox-custom']");
 
 // Handle new investment modal box
 newInvestBtn.addEventListener("click", (e) => {
@@ -40,18 +40,29 @@ function handleCloseModal(){
 
 
 function handleAllCheckBox(dis){
-  if(dis.checked === true){
+  const checked = dis.getAttribute("checked");
+  let cName = dis.className;
+  cName = cName.split(" ");
+  let findC = cName.find(item => item == 'tick-checkbox');
+  if(findC == undefined){
     for(let k =0; k<allInvestmentCheckbox.length; k++){
-      allInvestmentCheckbox[k].checked = true;
+      allInvestmentCheckbox[k].setAttribute("checked",true);
+      allInvestmentCheckbox[k].classList.add("tick-checkbox");
     }
     //update item selection counter
     itemCounter.innerHTML = 50;
+
+    // Update current checkbox checked tick
+    dis.classList.add("tick-checkbox");
   }else{
     for(let k =0; k<allInvestmentCheckbox.length; k++){
-      allInvestmentCheckbox[k].checked = false;
+      allInvestmentCheckbox[k].setAttribute("checked",false);
+      allInvestmentCheckbox[k].classList.remove("tick-checkbox");
       //update item selection counter
       itemCounter.innerHTML = 0;
     }
+    // Update current checkbox checked tick
+    dis.classList.remove("tick-checkbox");    
   }
 
 }
@@ -59,12 +70,29 @@ function handleAllCheckBox(dis){
 
 function handleCheckboxCounter(dis){
   let counter = parseInt(itemCounter.innerHTML);
-  if(dis.checked === true){
+  const checked = dis.getAttribute("checked");
+  let cName = dis.className;
+  cName = cName.split(" ");
+  let findC = cName.find(item => item == 'tick-checkbox');
+
+  if(findC == undefined){
     counter++;
     itemCounter.innerHTML = counter;
+
+    // update checkbox tick
+    dis.classList.add("tick-checkbox");
+
+    // update checkbox attribute
+    dis.setAttribute("checked",true);
   }else{
     counter == 0 ? 0 : counter--;
     itemCounter.innerHTML = counter;
+
+    // update checkbox tick
+    dis.classList.remove("tick-checkbox");
+
+    // update checkbox attribute
+    dis.setAttribute("checked",false);    
   }
 }
 

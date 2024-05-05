@@ -491,6 +491,33 @@ span.badge-danger{
     ;
   }
 
+  .check-investment{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  .check-investment .bg{
+    accent-color: #DDE0E5;
+  }
+
+  .c-checkbox{
+    width: 16px ;
+    height: 16px ;
+    border-radius: 4px;
+    border: 1px solid grey;
+    background-color: #ffffff;
+    margin: 5px 10px 5px 15px;
+    cursor: default;
+  }
+
+  .tick-checkbox{
+    background-color: #DDE0E5;
+    box-shadow: 0px 2px 5px 0px #5960781A;
+    box-shadow: 0px 0px 0px 1px #464F6029;
+    box-shadow: 0px 1px 1px 0px #0000001A;
+  }
+
 
 
 
