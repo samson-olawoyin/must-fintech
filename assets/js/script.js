@@ -31,6 +31,9 @@ const tickCheckBox = document.getElementsByClassName("tick-checkbox");
 // All investment items checkbox
 const allInvestmentCheckbox = document.querySelectorAll("input[type='checkbox-custom']");
 
+// Denield modal
+const deniedModal = document.getElementById("modal-denied");
+
 // Already approved modal
 const alreadApprovedModal = document.getElementById("modal-already-approved");
 
@@ -110,12 +113,19 @@ function handelSaveApplication(){
     if(tickCheckBox.length == 1){
       const checkStatus = tickCheckBox[0].getAttribute("status");
       console.log(checkStatus);
-      if(checkStatus != "approved"){
+
+      switch(checkStatus){
+        case "approved":
+          overlay.style.display = "block";
+          alreadApprovedModal.classList.remove("off-display");
+        break;
+        case 'denied':
         overlay.style.display = "block";
-        saveModal.classList.remove("off-display"); 
-      }else{
-        overlay.style.display = "block";
-        alreadApprovedModal.classList.remove("off-display");
+        deniedModal.classList.remove("off-display");
+        break;
+        default:
+          overlay.style.display = "block";
+          saveModal.classList.remove("off-display");           
       }
     }
      
