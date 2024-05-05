@@ -10,6 +10,9 @@ const newInvestmentClose2 = document.getElementById("btn-cancel2");
 
 const overlay = document.getElementById("overlay");
 
+const itemCounter = document.getElementById("item-counter");
+
+
 // All investment items checkbox
 const allInvestmentCheckbox = document.getElementsByClassName("check-investment");
 
@@ -41,11 +44,30 @@ function handleAllCheckBox(dis){
     for(let k =0; k<allInvestmentCheckbox.length; k++){
       allInvestmentCheckbox[k].checked = true;
     }
+    //update item selection counter
+    itemCounter.innerHTML = 50;
   }else{
     for(let k =0; k<allInvestmentCheckbox.length; k++){
       allInvestmentCheckbox[k].checked = false;
+      //update item selection counter
+      itemCounter.innerHTML = 0;
     }
   }
 
 }
+
+
+function handleCheckboxCounter(dis){
+  let counter = parseInt(itemCounter.innerHTML);
+  if(dis.checked === true){
+    counter++;
+    itemCounter.innerHTML = counter;
+  }else{
+    counter == 0 ? 0 : counter--;
+    itemCounter.innerHTML = counter;
+  }
+}
+
+
+
 
