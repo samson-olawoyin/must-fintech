@@ -12,6 +12,12 @@ const itemCounter = document.getElementById("item-counter");
 
 const saveApplicationBtn = document.getElementById("save-btn");
 
+const changeApprovalModal = document.getElementById("modal-change-approval");
+
+const changeApproval = document.getElementById("change-approval");
+
+changeApproval.addEventListener("change", handleApprovalChange);
+
 const modalItemNotSelected = document.getElementById("modal-not-selected");
 
 saveApplicationBtn.addEventListener("click", handelSaveApplication);
@@ -102,6 +108,18 @@ function handleModalClose(modal){
   const elem = document.getElementById(modal);
   elem.classList.add("off-display");
   overlay.style.display = "none";
+}
+
+// Handle change approval modal
+function handleApprovalChange(){
+  const value = this.value;
+  if(value == 0 && value != ""){
+      changeApprovalModal.classList.remove("off-display");
+      overlay.classList.remove("off-display");
+  }else{
+
+
+  }
 }
 
 
