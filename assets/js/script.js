@@ -22,6 +22,9 @@ const modalItemNotSelected = document.getElementById("modal-not-selected");
 
 saveApplicationBtn.addEventListener("click", handelSaveApplication);
 
+// save modal
+const saveModal = document.getElementById("modal-save");
+
 
 // All investment items checkbox
 const allInvestmentCheckbox = document.querySelectorAll("input[type='checkbox-custom']");
@@ -99,8 +102,8 @@ function handelSaveApplication(){
     overlay.classList.remove("off-display");
     modalItemNotSelected.classList.remove("off-display");
   }else{
-    overlay.classList.add("off-display");
-    modalItemNotSelected.classList.add("off-display");    
+    overlay.style.display = "block";
+    saveModal.classList.remove("off-display");    
   }
 }
 
