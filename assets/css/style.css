@@ -382,6 +382,13 @@ span.badge-danger{
     transform: translate(-50%, -50%);    
   }
 
+  .center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+  }
+
   #overlay {
     position: fixed; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
@@ -517,6 +524,55 @@ span.badge-danger{
     box-shadow: 0px 0px 0px 1px #464F6029;
     box-shadow: 0px 1px 1px 0px #0000001A;
   }
+
+  .item-not-selected-modal{
+    width: 400px;
+    height: 198px;
+    padding: 24px 30px 0px 24px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 8px -4px #1018280A;
+    box-shadow: 0px 20px 24px -4px #1018281A;
+    
+  }
+
+
+.modal-body{
+  margin-top: 20px;
+}
+
+.modal-title{
+  color:#0B101A;
+  font-size: 18px;
+  font-weight: 600;
+}
+.close-btn{
+  float: right;
+  background: none;
+  border: 0px;
+  margin-top: 10px;
+}
+
+.check-btn{
+  margin-top: 50px;
+  display: block;
+  margin: auto;
+  margin-top: 35px;
+  width: 200px;
+  height: 60px;
+  padding: 12px 16px 12px 16px;
+  gap: 10px;
+  border-radius: 10px;
+  opacity: 0px;
+  background-color: #2A3958;
+  color:#ffffff;
+  font-size: 26px;
+}
+
+#modal-not-selected{
+  background-color: white;
+  border-radius: 12px;
+}
+
 
 
 

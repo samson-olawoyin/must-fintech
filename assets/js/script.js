@@ -6,11 +6,15 @@ const registrationBox = document.querySelector("#new_investment_box");
 
 const newInvestmentClose = document.getElementById("btn-cancel");
 
-const newInvestmentClose2 = document.getElementById("btn-cancel2");
-
 const overlay = document.getElementById("overlay");
 
 const itemCounter = document.getElementById("item-counter");
+
+const saveApplicationBtn = document.getElementById("save-btn");
+
+const modalItemNotSelected = document.getElementById("modal-not-selected");
+
+saveApplicationBtn.addEventListener("click", handelSaveApplication);
 
 
 // All investment items checkbox
@@ -24,19 +28,6 @@ newInvestBtn.addEventListener("click", (e) => {
   overlay.style.display = "block";
   //registrationBox.className.remove("off-display");
 })
-
-//Close new investment modal box
-newInvestmentClose.addEventListener("click", handleCloseModal);
-
-newInvestmentClose2.addEventListener("click", handleCloseModal);
-
-function handleCloseModal(){
-    registrationBox.classList.add("off-display");
-  
-    //close the page overlay after modal been closed
-    overlay.style.display = "none";
-}
-
 
 
 function handleAllCheckBox(dis){
@@ -94,6 +85,23 @@ function handleCheckboxCounter(dis){
     // update checkbox attribute
     dis.setAttribute("checked",false);    
   }
+}
+
+function handelSaveApplication(){
+  let counter  = parseInt(itemCounter.innerHTML);
+  if(counter == 0){
+    overlay.classList.remove("off-display");
+    modalItemNotSelected.classList.remove("off-display");
+  }else{
+    overlay.classList.add("off-display");
+    modalItemNotSelected.classList.add("off-display");    
+  }
+}
+
+function handleModalClose(modal){
+  const elem = document.getElementById(modal);
+  elem.classList.add("off-display");
+  overlay.style.display = "none";
 }
 
 

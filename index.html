@@ -61,7 +61,7 @@
           <option value="승인상태 변경">승인상태 변경</option>
   
         </select>  
-        <button class="save-btn">저장</button>     
+        <button id="save-btn" class="save-btn">저장</button>     
       </div>
     </div>
   </section>
@@ -660,7 +660,7 @@
   <section id="new_investment_box" class="off-display">
     <div id="investment-box">
       <h3 class="float-left">투자유형 변경</h3>
-      <button class="float-right modal-btn" id="btn-cancel2">X</button>
+      <button class="float-right modal-btn" onClick="handleModalClose('new_investment_box')">X</button>
       <br><br><br>
       <hr class="home-hr2"/>
       <div id="invent-table">
@@ -701,7 +701,20 @@
       <hr class="home-hr2"/>
       <div class="modal-footer">
         <button id="btn-save">저장</button>
-        <button id="btn-cancel">취소</button>
+        <button id="btn-cancel" onClick="handleModalClose('new_investment_box')">취소</button>
+      </div>
+    </div>
+  </section>
+  <section id="modal-not-selected" class="center off-display">
+    <div class="item-not-selected-modal">
+      <span class="modal-header">
+        <img src="assets/images/caution.png" alt="!" /><button class="close-btn" onClick="handleModalClose('modal-not-selected')"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
+      </span>
+      <div class="modal-body">
+        <label class="modal-title">선택된 신청건이 없습니다.</label><br>
+        <span class="check-container">
+          <button class="check-btn" onClick="handleModalClose('modal-not-selected')">확인</button>
+        </span>
       </div>
     </div>
   </section>
