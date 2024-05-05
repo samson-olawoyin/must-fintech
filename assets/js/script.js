@@ -25,9 +25,14 @@ saveApplicationBtn.addEventListener("click", handelSaveApplication);
 // save modal
 const saveModal = document.getElementById("modal-save");
 
+// Get select checkbox
+const tickCheckBox = document.getElementsByClassName("tick-checkbox");
 
 // All investment items checkbox
 const allInvestmentCheckbox = document.querySelectorAll("input[type='checkbox-custom']");
+
+// Already approved modal
+const alreadApprovedModal = document.getElementById("modal-already-approved");
 
 // Handle new investment modal box
 newInvestBtn.addEventListener("click", (e) => {
@@ -102,8 +107,18 @@ function handelSaveApplication(){
     overlay.classList.remove("off-display");
     modalItemNotSelected.classList.remove("off-display");
   }else{
-    overlay.style.display = "block";
-    saveModal.classList.remove("off-display");    
+    if(tickCheckBox.length == 1){
+      const checkStatus = tickCheckBox[0].getAttribute("status");
+      console.log(checkStatus);
+      if(checkStatus != "approved"){
+        overlay.style.display = "block";
+        saveModal.classList.remove("off-display"); 
+      }else{
+        overlay.style.display = "block";
+        alreadApprovedModal.classList.remove("off-display");
+      }
+    }
+     
   }
 }
 
