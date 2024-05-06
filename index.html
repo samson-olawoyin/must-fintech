@@ -803,12 +803,20 @@
               <input type="checkbox" class="reject-checkbox" name="reason" /> <label>필수 서류 누락</label> <br>  
               <input type="checkbox" class="reject-checkbox" name="reason" /> 서류의 내용이 등록된 회원정보와 다름<label></label> <br>   
               <input type="checkbox" class="reject-checkbox" name="reason" />서류에 누락된 내용이 있음 (필수정보, 회사직인, 본인날인, 본인서명 등)<label></label> <br> 
-              <input type="checkbox" class="reject-checkbox" name="reason" />서류의 유효기간이 초과됨<label></label> <br>                              
-              <input type="checkbox" class="reject-checkbox" name="reason" />직접 입력<label></label> <br>   
+              <input type="checkbox" class="reject-checkbox" name="reason"/>서류의 유효기간이 초과됨<label></label> <br>                              
+              <input type="checkbox" class="reject-checkbox" name="reason" id="attach-box-visible" />직접 입력<label></label> <br>   
               <textarea class="rejection-remark" placeholder="사유 입력"></textarea>         
             </div>
-          </div>                    
+          </div>                               
         </div>
+        <table class="attached-table off-display" id="attached-table" >
+          <tr>
+              <td class="cell-th">최근저장일시</td>
+              <td class="cell-td"><input type="datetime" class="td-input" value="2022-01-01 09:00:00" /></td>
+              <td class="cell-th">관리자</td>
+              <td class="cell-td"><input type="text" class="td-input" value="김관리자" /></td>
+          </tr>
+        </table>
       </div>
       <br>
       <hr class="home-hr2"/>

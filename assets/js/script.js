@@ -38,6 +38,12 @@ const deniedModal = document.getElementById("modal-denied");
 // Already approved modal
 const alreadApprovedModal = document.getElementById("modal-already-approved");
 
+// Show rejection box additional details
+const rejectionAdditionalDetails = document.getElementById("attach-box-visible");
+
+// Rejection Attached box details
+const attachedBox = document.getElementById("attached-table"); 
+
 // Modal rejection reason
 const rejectionModal = document.getElementById("modal-rejection-reason");
 // Handle new investment modal box
@@ -173,6 +179,25 @@ function handleApprovalChange(){
     }
   }
 
+}
+
+rejectionAdditionalDetails.addEventListener("change",handleAttachBox);
+
+function handleAttachBox(){
+  const modal = document.getElementById("rejection-modal");
+
+  switch(this.checked){
+    case true:
+      // Increase the modal height
+      modal.style.height = "830px";
+      attachedBox.classList.remove("off-display");
+
+      break;
+      default:
+        attachedBox.classList.add("off-display");
+        // set the modal height to default
+        modal.style.height = "750px";
+  }
 }
 
 

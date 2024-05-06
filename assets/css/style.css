@@ -470,6 +470,19 @@ span.badge-danger{
     width: 100%;
   }  
 
+  .table-cell{
+    display: table-cell;
+    padding: 20px;
+    width: 200px;
+    max-height: 15px;
+  }
+
+  .table-cell input[type='date'] input[type='text']{
+    border:0px;
+    height: 20px;
+    width: 150px;
+  }  
+
   .invest-table-cell select{
     border-radius: 8px;
     padding: 10px 12px 10px 12px;
@@ -603,6 +616,7 @@ span.badge-danger{
 .modal{
   background-color: white;
   border-radius: 12px;
+  
 }
 
 .btn-group{
@@ -637,11 +651,48 @@ span.badge-danger{
   background-color: #DDE0E5;
   margin-top: 10px;
   padding: 12px 0px 0px 12px;
+  overflow: scroll;
 }
 
 .modal-head{
   padding: 20px 24px 0px 24px;
 }
+
+.cell-th{
+  padding: 20px;
+  color: black;
+  background-color: #EBEEF3;
+  width: 110px;
+  white-space: nowrap;
+  border-top: 1px solid #D7D8DA;
+  border-left: 1px solid #D7D8DA;
+  border-bottom: 1px solid #D7D8DA;
+}
+
+
+.cell-td{
+  padding: 20px;
+  width: 200px;
+  white-space: nowrap;
+  border-top: 1px solid #D7D8DA;
+  border-right: 1px solid #D7D8DA;
+  border-bottom: 1px solid #D7D8DA;  
+}
+
+.td-input{
+  width:150px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0px;
+  box-shadow: none !important;
+}
+
+.attached-table{
+  margin-top: 20px;
+}
+
+
+
 
 
 
