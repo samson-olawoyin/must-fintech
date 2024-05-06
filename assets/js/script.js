@@ -44,6 +44,9 @@ const rejectionAdditionalDetails = document.getElementById("attach-box-visible")
 // Rejection Attached box details
 const attachedBox = document.getElementById("attached-table"); 
 
+// Fileupload item counter
+const fileUploadCounter = document.getElementsByClassName("span-fileupload");
+
 // Modal rejection reason
 const rejectionModal = document.getElementById("modal-rejection-reason");
 // Handle new investment modal box
@@ -64,12 +67,14 @@ const upload = document.getElementById("upload-input");
 
 uploadBtn.addEventListener("click", handleUploadClick)
 
-// Upload files name cox
+// Upload files name box
 const uploadFileName = document.getElementById("upload-name");
 
 // File upload type modal
-const fileUploadType = document.getElementById("modal-file-upload-type");
+const fileUploadType = document.getElementById("modal-file-upload-type"); 
 
+// File upload limit alert
+const fileUploadLimit = document.getElementById("modal-file-upload-limit");
 
 function handleAllCheckBox(dis){
   const checked = dis.getAttribute("checked");
@@ -231,16 +236,20 @@ function handleUploadFile(e){
   const match = ext.find( f => f == fileExt);
 
   if(match != undefined){
-    const span = document.createElement("span");
-    const img = document.createElement("img");
-    img.setAttribute("src" , "assets/images/x-round.svg");
-    img.setAttribute("key" , elId);
-    span.setAttribute("id" , elId);
-    img.classList.add("close-fileupload");
-    span.classList.add("span-fileupload")
-    span.innerHTML = fileName;
-    span.appendChild(img);
-    uploadFileName.appendChild(span);
+    if(fileUploadCounter.length < 10){
+      const span = document.createElement("span");
+      const img = document.createElement("img");
+      img.setAttribute("src" , "assets/images/x-round.svg");
+      img.setAttribute("key" , elId);
+      span.setAttribute("id" , elId);
+      img.classList.add("close-fileupload");
+      span.classList.add("span-fileupload")
+      span.innerHTML = fileName;
+      span.appendChild(img);
+      uploadFileName.appendChild(span);
+    }else {
+      fileUploadLimit.classList.remove("off-display");
+    }
   }else {
     fileUploadType.classList.remove("off-display");
   }
