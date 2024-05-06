@@ -185,18 +185,20 @@ rejectionAdditionalDetails.addEventListener("change",handleAttachBox);
 
 function handleAttachBox(){
   const modal = document.getElementById("rejection-modal");
+  const btn = document.querySelector(".btn-reject");
 
   switch(this.checked){
     case true:
       // Increase the modal height
       modal.style.height = "830px";
       attachedBox.classList.remove("off-display");
-
+      btn.classList.add("off-display");
       break;
       default:
         attachedBox.classList.add("off-display");
         // set the modal height to default
         modal.style.height = "750px";
+        btn.classList.remove("off-display");
   }
 }
 
