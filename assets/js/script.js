@@ -70,6 +70,7 @@ const uploadFileName = document.getElementById("upload-name");
 // File upload type modal
 const fileUploadType = document.getElementById("modal-file-upload-type");
 
+
 function handleAllCheckBox(dis){
   const checked = dis.getAttribute("checked");
   let cName = dis.className;
@@ -228,8 +229,8 @@ function handleUploadFile(e){
   const fileExt = fileName.split(".")[1];
   const ext = ['jpg','jpeg','png','pdf'];
   const match = ext.find( f => f == fileExt);
-console.log(match)
-;  if(match != undefined){
+
+  if(match != undefined){
     const span = document.createElement("span");
     const img = document.createElement("img");
     img.setAttribute("src" , "assets/images/x-round.svg");
@@ -248,6 +249,8 @@ console.log(match)
 function getFileName(file){
   return file.split("\\").pop();
 }
+
+
 
 
 
