@@ -692,6 +692,10 @@
             <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
             <div class="invest-table-cell">
               <span class="fileupload">파일 선택</span>
+              <input type="file" id="upload-input" />
+              <div id="upload-name">
+
+              </div>
             </div>
           </div>                    
         </div>
@@ -826,6 +830,20 @@
       </div>
     </div>
   </section>
+
+  <section id="modal-file-upload-type" class="center off-display modal">
+    <div class="item-not-selected-modal" style="width: 430px;height: 230px;">
+      <span class="modal-header">
+        <img src="assets/images/caution.png" alt="X" /><button class="close-btn" onClick="handleModalClose('modal-file-upload-type')"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
+      </span>
+      <div class="modal-body">
+        <label class="modal-title">jpg, jpeg, gif, png, pdf 파일만 등록 가능합니다.</label><br>
+        <span class="check-container">
+          <button class="check-btn" onClick="handleModalClose('modal-file-upload-type')">확인</button>
+        </span>
+      </div>
+    </div>
+  </section>   
   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 

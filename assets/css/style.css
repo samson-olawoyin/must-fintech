@@ -696,6 +696,30 @@ span.badge-danger{
 }
 
 
+#upload-input{
+  display: none;
+}
+
+.fileupload{
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+#upload-name{
+  display: inline;
+}
+
+.close-fileupload{
+  position: relative;
+  top: 5px;
+  left: 7px;
+}
+
+.span-fileupload{
+  padding-right: 20px;
+}
+
+
 
 
 

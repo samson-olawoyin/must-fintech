@@ -56,6 +56,20 @@ newInvestBtn.addEventListener("click", (e) => {
 })
 
 
+// Upload btn
+const uploadBtn = document.querySelector(".fileupload");
+
+// Upload input
+const upload = document.getElementById("upload-input");
+
+uploadBtn.addEventListener("click", handleUploadClick)
+
+// Upload files name cox
+const uploadFileName = document.getElementById("upload-name");
+
+// File upload type modal
+const fileUploadType = document.getElementById("modal-file-upload-type");
+
 function handleAllCheckBox(dis){
   const checked = dis.getAttribute("checked");
   let cName = dis.className;
@@ -200,6 +214,39 @@ function handleAttachBox(){
         modal.style.height = "750px";
         btn.classList.remove("off-display");
   }
+}
+
+function handleUploadClick(){
+  upload.click();
+}
+
+upload.addEventListener("change", handleUploadFile);
+
+function handleUploadFile(e){
+  const elId = Math.floor (Math.random() * 100000);
+  const fileName = getFileName(this.value);
+  const fileExt = fileName.split(".")[1];
+  const ext = ['jpg','jpeg','png','pdf'];
+  const match = ext.find( f => f == fileExt);
+console.log(match)
+;  if(match != undefined){
+    const span = document.createElement("span");
+    const img = document.createElement("img");
+    img.setAttribute("src" , "assets/images/x-round.svg");
+    img.setAttribute("key" , elId);
+    span.setAttribute("id" , elId);
+    img.classList.add("close-fileupload");
+    span.classList.add("span-fileupload")
+    span.innerHTML = fileName;
+    span.appendChild(img);
+    uploadFileName.appendChild(span);
+  }else {
+    fileUploadType.classList.remove("off-display");
+  }
+}
+
+function getFileName(file){
+  return file.split("\\").pop();
 }
 
 
