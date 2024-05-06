@@ -28,6 +28,7 @@ const saveModal = document.getElementById("modal-save");
 // Get select checkbox
 const tickCheckBox = document.getElementsByClassName("tick-checkbox");
 
+
 // All investment items checkbox
 const allInvestmentCheckbox = document.querySelectorAll("input[type='checkbox-custom']");
 
@@ -37,6 +38,8 @@ const deniedModal = document.getElementById("modal-denied");
 // Already approved modal
 const alreadApprovedModal = document.getElementById("modal-already-approved");
 
+// Modal rejection reason
+const rejectionModal = document.getElementById("modal-rejection-reason");
 // Handle new investment modal box
 newInvestBtn.addEventListener("click", (e) => {
   registrationBox.classList.remove("off-display");
@@ -112,8 +115,6 @@ function handelSaveApplication(){
   }else{
     if(tickCheckBox.length == 1){
       const checkStatus = tickCheckBox[0].getAttribute("status");
-      console.log(checkStatus);
-
       switch(checkStatus){
         case "approved":
           overlay.style.display = "block";
@@ -141,13 +142,37 @@ function handleModalClose(modal){
 // Handle change approval modal
 function handleApprovalChange(){
   const value = this.value;
-  if(value == 0 && value != ""){
-      changeApprovalModal.classList.remove("off-display");
-      overlay.classList.remove("off-display");
+  const counter = parseInt(itemCounter.innerHTML);
+
+  if(counter != 0){
+    if(tickCheckBox.length == 1){
+      const checkStatus = tickCheckBox[0].getAttribute("status");
+      switch(checkStatus){
+        case "approved":
+          overlay.style.display = "block";
+          alreadApprovedModal.classList.remove("off-display");
+          break;
+          case "waiting":
+            if(value == 0 && value != ""){
+              changeApprovalModal.classList.remove("off-display");
+              overlay.style.display = "block";
+            }else if(value == 1){
+              rejectionModal.classList.remove("off-display");
+              overlay.style.display = "block";
+            }            
+            break;
+            default:
+              overlay.style.display = "block";
+              deniedModal.classList.remove("off-display");
+      }
+    }
   }else{
-
-
+    if(value != ""){
+      overlay.classList.remove("off-display");
+      modalItemNotSelected.classList.remove("off-display");
+    }
   }
+
 }
 
 

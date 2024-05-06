@@ -658,45 +658,48 @@
   </section>
   <section id="new_investment_box" class="off-display">
     <div id="investment-box">
-      <h3 class="float-left">투자유형 변경</h3>
-      <button class="float-right modal-btn" onClick="handleModalClose('new_investment_box')">X</button>
-      <br><br><br>
-      <hr class="home-hr2"/>
-      <div id="invent-table">
-        <div class="invent-table-row">
-          <div class="invest-table-cell th">회원번호</div>
-          <div class="invest-table-cell"><input type="text" value="abc111" /></div>
-        </div>
-        <div class="invent-table-row">
-          <div class="invest-table-cell th">회원명/법인명</div>
-          <div class="invest-table-cell"><input type="text" value="김길동" /></div>
-        </div> 
-        <div class="invent-table-row">
-          <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
-          <div class="invest-table-cell">
-            <select>
-              <option value="일반개인">일반개인</option>
-              <option value="일반개인">일반개인</option>
-              <option value="소득적격">소득적격</option>
-              <option value="개인전문">개인전문</option>
-              <option value="법인">법인</option>
-              <option value="여신금융">여신금융</option>
-              <option value="P2P온투">P2P온투</option>
-            </select>
-          </div>
-        </div>   
-        <div class="invent-table-row">
-          <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
-          <div class="invest-table-cell">
-            <span class="fileupload">파일 선택</span>
-          </div>
-        </div>                    
+      <div class="modal-head">
+        <h3 class="float-left">투자유형 변경</h3>
+        <button class="close-btn" onClick="handleModalClose('new_investment_box')"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
       </div>
-      <ul id="modal-info">
-        <li>파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.</li>
-        <li>최대 10개, 100MB까지 등록이 가능합니다.</li>
-      </ul>
-      <br>
+        <br><br><br>
+        <hr class="home-hr2"/>
+      <div class="modal-body">
+        <div id="invent-table">
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원번호</div>
+            <div class="invest-table-cell"><input type="text" value="abc111" /></div>
+          </div>
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원명/법인명</div>
+            <div class="invest-table-cell"><input type="text" value="김길동" /></div>
+          </div> 
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
+            <div class="invest-table-cell">
+              <select>
+                <option value="일반개인">일반개인</option>
+                <option value="일반개인">일반개인</option>
+                <option value="소득적격">소득적격</option>
+                <option value="개인전문">개인전문</option>
+                <option value="법인">법인</option>
+                <option value="여신금융">여신금융</option>
+                <option value="P2P온투">P2P온투</option>
+              </select>
+            </div>
+          </div>   
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원명/법인명 <sup><span id="dot"></span></sup></div>
+            <div class="invest-table-cell">
+              <span class="fileupload">파일 선택</span>
+            </div>
+          </div>                    
+        </div>
+        <ul id="modal-info">
+          <li>파일 형식은 jpg, jpeg, gif, png, pdf만 가능합니다.</li>
+          <li>최대 10개, 100MB까지 등록이 가능합니다.</li>
+        </ul>
+      </div>
       <hr class="home-hr2"/>
       <div class="modal-footer">
         <button id="btn-save">저장</button>
@@ -774,7 +777,47 @@
       </div>
     </div>
   </section>   
-
+  <section id="modal-rejection-reason" class="off-display center">
+    <div id="rejection-modal">
+      <div class="modal-head">
+        <h3 class="float-left">승인거부 사유 입력</h3>
+        <button class="close-btn" onClick="handleModalClose('modal-rejection-reason')"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
+      </div>
+      <br><br><br>
+      <hr class="home-hr2"/>
+      <div class="modal-body">
+        <div id="invent-table">
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원번호</div>
+            <div class="invest-table-cell"><input type="text" value="abc111" /></div>
+          </div>
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">회원명/법인명</div>
+            <div class="invest-table-cell"><input type="text" value="김길동" /></div>
+          </div>   
+          <div class="invent-table-row">
+            <div class="invest-table-cell th">승인거부 사유 <sup><span id="dot"></span></sup></div>
+            <div class="invest-table-cell">
+              
+              <input type="checkbox" class="reject-checkbox" name="reason" /> <label>서류 식별 불가</label> <br>
+              <input type="checkbox" class="reject-checkbox" name="reason" /> <label>필수 서류 누락</label> <br>  
+              <input type="checkbox" class="reject-checkbox" name="reason" /> 서류의 내용이 등록된 회원정보와 다름<label></label> <br>   
+              <input type="checkbox" class="reject-checkbox" name="reason" />서류에 누락된 내용이 있음 (필수정보, 회사직인, 본인날인, 본인서명 등)<label></label> <br> 
+              <input type="checkbox" class="reject-checkbox" name="reason" />서류의 유효기간이 초과됨<label></label> <br>                              
+              <input type="checkbox" class="reject-checkbox" name="reason" />직접 입력<label></label> <br>   
+              <textarea class="rejection-remark" placeholder="사유 입력"></textarea>         
+            </div>
+          </div>                    
+        </div>
+      </div>
+      <br>
+      <hr class="home-hr2"/>
+      <div class="modal-footer">
+        <button id="btn-save">저장</button>
+        <button id="btn-cancel" onClick="handleModalClose('modal-rejection-reason')">취소</button>
+      </div>
+    </div>
+  </section>
   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
