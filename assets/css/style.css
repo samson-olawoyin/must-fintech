@@ -629,6 +629,8 @@ span.badge-danger{
   border-radius: 6px;
   border: 1px solid #D7D8DA;
   opacity: 0px;
+  accent-color: #DDE0E5;
+  padding: 5px;
 }
 
 #rejection-modal{
