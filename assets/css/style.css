@@ -759,6 +759,35 @@ span.badge-danger{
   top: 50%;
 }
 
+.angle-left{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 15px;
+}
+
+.angle-left2{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 15px;
+  right: -20px;
+}
+
+.angle-right{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 15px;
+  left: -10px;
+}
+
+.angle-right2{
+  position: relative;
+  top: 7px;
+  left: -20px;
+}
+
 
 
 

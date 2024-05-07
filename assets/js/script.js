@@ -83,6 +83,9 @@ const viewUploadedFile = document.getElementById("view-uploaded-file");
 //file viewer div
 const fileViewer = document.getElementById("view-files");
 
+// File Upload size limit
+const fileSizeLimit = document.getElementById("modal-file-upload-file-size");
+
 
 function handleAllCheckBox(dis){
   const checked = dis.getAttribute("checked");
@@ -244,23 +247,28 @@ function handleUploadFile(e){
   const fileExt = fileName.split(".")[1];
   const ext = ['jpg','jpeg','png','pdf'];
   const match = ext.find( f => f == fileExt);
+  const fileSize = this.files[0].size / 1020 / 1024;
 
   if(match != undefined){
-    if(fileUploadCounter.length < 10){
-      const span = document.createElement("span");
-      const img = document.createElement("img");
-      img.setAttribute("src" , "assets/images/x-round.svg");
-      img.setAttribute("key" , elId);
-      span.setAttribute("id" , elId);
-      span.setAttribute("file",this.value);
-      span.addEventListener("click", handleViewFileUpload);     
-      img.classList.add("close-fileupload");
-      span.classList.add("span-fileupload");
-      span.innerHTML = fileName;
-      span.appendChild(img);
-      uploadFileName.appendChild(span);
-    }else {
-      fileUploadLimit.classList.remove("off-display");
+    if(fileSize > 100){
+      fileSizeLimit.classList.remove("off-display");
+    }else{
+      if(fileUploadCounter.length < 10){
+        const span = document.createElement("span");
+        const img = document.createElement("img");
+        img.setAttribute("src" , "assets/images/x-round.svg");
+        img.setAttribute("key" , elId);
+        span.setAttribute("id" , elId);
+        span.setAttribute("file",this.value);
+        span.addEventListener("click", handleViewFileUpload);     
+        img.classList.add("close-fileupload");
+        span.classList.add("span-fileupload");
+        span.innerHTML = fileName;
+        span.appendChild(img);
+        uploadFileName.appendChild(span);
+      }else {
+        fileUploadLimit.classList.remove("off-display");
+      }
     }
   }else {
     fileUploadType.classList.remove("off-display");

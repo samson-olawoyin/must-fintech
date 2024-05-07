@@ -637,10 +637,11 @@
     <div class="pagination">
       <ul>
         <li>
-          <a href=""><i class="fa-solid fa-angles-left"></i></a>
+          <a href=""><img src="assets/images/left2.png" class="angle-left2"></span></a>
         </li>
         <li>
-          <a href=""><i class="fa-solid fa-angle-left"></i></a></li>
+          <a href=""><img src="assets/images/left.png" class="angle-left"></span></a>  
+        </li>
         <li><a href="" class="active">1</a></li>
         <li><a href="">2</a></li>
         <li><a href="">3</a></li>
@@ -651,8 +652,12 @@
         <li><a href="">8</a></li>
         <li><a href="">9</a></li> 
         <li><a href="">10</a></li>                
-        <li><a href=""><i class="fa-solid fa-angle-right"></i></a></li>
-        <li><a href=""><i class="fa-solid fa-angles-right"></i></a></li>
+        <li>
+          <a href=""><img src="assets/images/right.png" class="angle-right"></span></a>
+        </li>
+        <li>
+          <a href=""><img src="assets/images/right2.png" class="angle-right2"></span></a>  
+        </li>
       </ul> 
     </div>
   </section>
@@ -854,6 +859,20 @@
         <label class="modal-title">최대 10개까지 등록 가능합니다.</label><br>
         <span class="check-container">
           <button class="check-btn" onClick="handleModalClose('modal-file-upload-limit')">확인</button>
+        </span>
+      </div>
+    </div>
+  </section> 
+  
+  <section id="modal-file-upload-file-size" class="center off-display modal">
+    <div class="item-not-selected-modal" style="width: 430px;height: 230px;">
+      <span class="modal-header">
+        <img src="assets/images/caution.png" alt="X" /><button class="close-btn" onClick="handleModalClose('modal-file-upload-file-size',false)"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
+      </span>
+      <div class="modal-body">
+        <label class="modal-title">최대 100MB까지 등록 가능합니다.</label><br>
+        <span class="check-container">
+          <button class="check-btn" onClick="handleModalClose('modal-file-upload-file-size',false)">확인</button>
         </span>
       </div>
     </div>
