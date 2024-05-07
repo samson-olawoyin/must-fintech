@@ -857,6 +857,35 @@
         </span>
       </div>
     </div>
+  </section>  
+
+  <section id="view-uploaded-file" class="center off-display">
+    <div id="investment-box" style="height:800px">
+      <div class="modal-head">
+        <h3 class="float-left">서류 보기</h3>
+        <button class="close-btn" onClick="handleModalClose('view-uploaded-file')"><img src="assets/images/x.png" alt="X" width="20" height="20"/></button>
+      </div>
+        <br><br>
+        <hr class="home-hr2"/>
+        <div class="modal-body">
+          <div id="invent-table">
+   
+            <div class="invent-table-row" >
+              <div class="invest-table-cell th custom"><label class="file-label">서류 <sup><span id="dot"></span></sup></label></div>
+              <div class="invest-table-cell custom">
+                <div id="view-files">
+                  
+                </div>
+              </div>
+            </div>                    
+          </div>
+        </div>
+        <hr class="home-hr2"/>
+        <div class="modal-footer">
+          <button id="btn-save">파일 다운로드</button>
+          <button id="btn-cancel" onClick="handleModalClose('view-uploaded-file')">확인</button>
+        </div>
+    </div>
   </section>   
   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>

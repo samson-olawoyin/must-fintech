@@ -43,7 +43,6 @@ color:#FF4D4F;
 
 .home-hr2{
   border: 1px solid #D7D8DA;
-  margin-top: 30px;
 }
 
 #nav-bar{
@@ -365,7 +364,7 @@ span.badge-danger{
   }
 
   #investment-box{
-    height: 650px;
+    height: 670px;
     width: 800px;
     margin: 20px 15px 20px 15px;
     box-shadow: 0px 20px 24px -4px #1018281A;
@@ -510,6 +509,20 @@ span.badge-danger{
     max-width: 170px;
     white-space: nowrap;
     ;
+  }
+
+  .invest-table-cell.th.custom{
+    background-color: #EBEEF3;
+    max-width: 170px;
+    white-space: nowrap;
+    height: 500px;
+  }
+
+  .invest-table-cell{
+    display: table-cell;
+    padding: 20px;
+    width: 500px;
+    max-height: 500px;   
   }
 
   .check-investment{
@@ -719,6 +732,31 @@ span.badge-danger{
 
 .span-fileupload{
   padding-right: 20px;
+}
+
+.file-upload{
+  position: relative;
+  top: 50%;
+}
+
+#view-files{
+  overflow: overlay; 
+  max-height: 500px;
+  width: 100%;
+  padding-right: 22px;
+}
+
+.file-frame{
+  border-radius: 10px;
+  border: 1px solid #B1B4BB;
+  height: 500px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.file-label{
+  position: relative;
+  top: 50%;
 }
 
 

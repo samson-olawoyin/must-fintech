@@ -47,6 +47,7 @@ const attachedBox = document.getElementById("attached-table");
 // Fileupload item counter
 const fileUploadCounter = document.getElementsByClassName("span-fileupload");
 
+
 // Modal rejection reason
 const rejectionModal = document.getElementById("modal-rejection-reason");
 // Handle new investment modal box
@@ -75,6 +76,13 @@ const fileUploadType = document.getElementById("modal-file-upload-type");
 
 // File upload limit alert
 const fileUploadLimit = document.getElementById("modal-file-upload-limit");
+
+// View upload file modal
+const viewUploadedFile = document.getElementById("view-uploaded-file");
+
+//file viewer div
+const fileViewer = document.getElementById("view-files");
+
 
 function handleAllCheckBox(dis){
   const checked = dis.getAttribute("checked");
@@ -159,10 +167,12 @@ function handelSaveApplication(){
   }
 }
 
-function handleModalClose(modal){
+function handleModalClose(modal, closeOverlay = true){
   const elem = document.getElementById(modal);
   elem.classList.add("off-display");
-  overlay.style.display = "none";
+  if(closeOverlay){
+    overlay.style.display = "none";
+  }
 }
 
 // Handle change approval modal
@@ -242,8 +252,10 @@ function handleUploadFile(e){
       img.setAttribute("src" , "assets/images/x-round.svg");
       img.setAttribute("key" , elId);
       span.setAttribute("id" , elId);
+      span.setAttribute("file",this.value);
+      span.addEventListener("click", handleViewFileUpload);     
       img.classList.add("close-fileupload");
-      span.classList.add("span-fileupload")
+      span.classList.add("span-fileupload");
       span.innerHTML = fileName;
       span.appendChild(img);
       uploadFileName.appendChild(span);
@@ -257,6 +269,32 @@ function handleUploadFile(e){
 
 function getFileName(file){
   return file.split("\\").pop();
+}
+
+function handleViewFileUpload(){
+  const file = this.getAttribute("file");
+  //close current modal
+  registrationBox.classList.add("off-display");
+  viewUploadedFile.classList.remove("off-display");
+
+  // Load file viewer
+  buildFileViewFrame();
+}
+
+function buildFileViewFrame(){
+  console.log(fileUploadCounter);
+  const len = fileUploadCounter.length;
+
+  for(let k =0 ; k < len ; k++){
+    const frame = document.createElement("div");
+    const img = document.createElement("img");
+    img.setAttribute("alt","img");
+    img.setAttribute("src",fileUploadCounter[k].getAttribute("file"));
+    img.classList.add("uploaded-img");
+    frame.classList.add("file-frame");
+    frame.appendChild(img);
+    fileViewer.appendChild(frame);
+  }
 }
 
 
